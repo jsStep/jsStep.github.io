@@ -1,0 +1,308 @@
+.nav{
+  @include flex-between;
+  height: 100px;
+  background-color: $navColor;
+  &_bg{
+    @include flex-between;
+    width: 100%;
+    position: relative;
+  }
+  &__menu{
+    display: none;
+  }
+  &__text-logo{
+    display: none;
+  }
+  // BURGER MENU //
+
+  &__burger {
+    @include flex-center;
+    width: 50px;
+    height: 50px;
+    padding-right: 30px;
+    cursor: pointer;
+    position: relative;
+
+    &_button {
+      position: relative;
+      width: 27px;
+      height: 27px;
+      &_item {
+        position: absolute;
+        width: 19px;
+        height: 2px;
+        opacity: 1;
+        background-color: #e5e3e3;
+        left: 45px;
+        top: 2px;
+        transition: all .4s linear;
+        transform-origin: 2.3px 1px;
+      }
+      &_item:nth-child(2) {
+        top: 11px;
+        width: 26px;
+        left: 38px;
+      }
+      &_item:nth-child(3) {
+        top: 20px;
+        width: 26px;
+        left: 38px;
+      }
+    }
+  }
+  &__burger_opened {
+    @include flex-center;
+    width: 50px;
+    height: 50px;
+    padding-right: 30px;
+    cursor: pointer;
+    position: relative;
+
+    &_button i {
+      transform: rotate(45deg);
+    }
+    &_button i:nth-child(2) {
+      opacity: 0;
+    }
+    &_button i:nth-child(3) {
+      transform: rotate(-45deg);
+    }
+  }
+
+
+  &__dropdown-menu{
+    position: absolute;
+    display: none;
+    top: 75px;
+    right: 13px;
+    width: 290px;
+    height: 367px;
+    background-color: #333333;
+    z-index: 1;
+    &_list{
+      &_items{
+        width: 200px;
+        height: 85px;
+        //font-family: Lato;
+        font-size: 27px;
+        font-weight: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: $white;
+        display: flex;
+        align-items: center;
+        padding-left: 32px;
+        padding-right: 54px;
+        border: 2px solid #3b3b3b;
+        & a{
+          text-decoration: none;
+          color: $white;
+        }
+        &_active{
+          //border-left: 8px solid #8d81ac;
+          width: 200px;
+          height: 85px;
+          //font-family: Lato;
+          font-size: 27px;
+          font-weight: normal;
+          letter-spacing: normal;
+          text-align: left;
+          color: $white;
+          display: flex;
+          align-items: center;
+          padding-left: 24px;
+          padding-right: 62px;
+          border: 2px solid #3b3b3b;
+          & a{
+            text-decoration: none;
+            color: $violette;
+            border-left: 8px solid $violette;
+            padding-left: 25px;
+            margin-left: -26px;
+            padding-top: 13px;
+            padding-bottom: 13px;
+          }
+        }
+      }
+    }
+  }
+
+
+  &__logo{
+    margin-left: 6px;
+    margin-top: -3px;
+    width: 43px;
+    height: 41px;
+    background-image: url("../img/logo_sprite.png");
+    cursor: pointer;
+  }
+  &__logo:hover {
+    background-position: 43px;
+    background-image: url("../img/logo_sprite.png");
+  }
+
+  &__button{
+    text-decoration: none;
+    color: $white;
+    padding: 10px 26px;
+    background-color: $violette;
+    border-radius: 25px;
+    margin-left: 50px;
+    margin-top: -6px;
+    font-size: 17px;
+    //font-family: 'Lato', sans-serif;
+  }
+  &__button:hover{
+    color: $violette;
+    background-color: $white;
+    border: 1px solid $violette;
+
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    @include flex-between;
+    height: 120px;
+    background-color: $navColor;
+    position: relative;
+    &_bg{
+      @include flex-between;
+      width: 100%;
+      height: 100px;
+      background-color: #27262a;
+      position: unset;
+    }
+    &__burger{
+      display: none;
+    }
+    &__text-logo{
+      margin-left: 60px;
+      margin-top: 7px;
+      color: $violette;
+      font-size: 23px;
+      display: block;
+    }
+    &__text-logo:hover{
+      color: $white;
+    }
+    &__logo{
+      margin-left: 11px;
+      margin-top: -30px;
+      width: 43px;
+      height: 41px;
+      background-image: url('../img/logo_sprite.png');
+      cursor: pointer;
+      float: left;
+    }
+    &__button{
+      text-decoration: none;
+      color: $white;
+      padding: 12px 46px;
+      background-color: $violette;
+      border-radius: 25px;
+      margin-top: -33px;
+      font-size: 16px;
+      //font-family: 'Lato', sans-serif;
+    }
+    &__menu{
+      @include flex-center;
+      position: absolute;
+      top: 83px;
+      width: 100%;
+      &_list{
+        &_items{
+          font-size: 19px;
+          float: left;
+          padding-left: 10px;
+          padding-right: 38px;
+          & a{
+            color: $violette;
+            text-decoration: none;
+          }
+          & a:hover{
+            color: $white;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .nav {
+    @include flex-between;
+    height: 100px;
+    background-color: #27262a;
+    position: unset;
+    &_bg{
+      @include flex-between;
+      max-width: 1200px;
+      height: 100px;
+      background-color: #27262a;
+      position: unset;
+      margin: 0 auto;
+    }
+    &__burger{
+      display: none;
+    }
+    &__text-logo{
+      margin-left: 60px;
+      margin-top: 7px;
+      color: #8e81ad;
+      font-size: 23px;
+      display: block;
+    }
+    &__text-logo:hover{
+      color: $white;
+    }
+    &__logo{
+      margin-left: 0;
+      margin-top: 0;
+      width: 43px;
+      height: 41px;
+      background-image: url('../img/logo_sprite.png');
+      cursor: pointer;
+      float: left;
+    }
+    &__button{
+      text-decoration: none;
+      color: #ffffff;
+      padding: 12px 46px;
+      background-color: #8d81ac;
+      border-radius: 25px;
+      margin-top: 0;
+      font-size: 16px;
+      font-family: 'Lato', sans-serif;
+      width: 100px;
+      border: 1px solid #8d81ac;
+    }
+    &__menu{
+      position: unset;
+      display: flex;
+      width: 950px;
+      justify-content: flex-end;
+      margin-left: 107px;
+      &_list{
+        &_items{
+          font-size: 17px;
+          float: left;
+          padding-left: 58px;
+          padding-right: 0px;
+          text-align: right;
+          font-weight: 600;
+          padding-bottom: 3px;
+          & a{
+            color: $violette;
+            text-decoration: none;
+          }
+          & a:hover{
+            color: $white;
+          }
+        }
+
+      }
+    }
+  }
+}

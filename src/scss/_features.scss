@@ -1,0 +1,116 @@
+.features {
+  position: relative;
+
+  &-bg {
+    background-color: $lightGrey;
+  }
+  &-header {
+    padding-top: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    color: $violette;
+  }
+  &-actions {
+    padding-bottom: 50px;
+
+    &__item {
+      @include flex-column;
+
+      &-img {
+        margin-top: 25px;
+        width: 111px;
+        height: 84px;
+        background-image: url("../img/block3_sprite.png");
+      }
+      &-content {
+        flex: 1;
+        margin-top: 25px;
+      }
+      &-header {
+        font-size: 18px;
+      }
+      &-text {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 20px;
+        color: darkgrey;
+      }
+      &:first-child &-img  {
+        background-position: 0 0;
+      }
+      &:nth-child(2) &-img {
+        background-position: 111px 0;
+      }
+      &:nth-child(3) &-img {
+        background-position: 0 84px;
+      }
+      &:nth-child(4) &-img {
+        background-position: 111px 84px;
+      }
+    }
+  }
+
+  &-code {
+    overflow: hidden;
+    width: calc(100% + 10px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .features {
+    &-header {
+      padding-top: 50px;
+      font-size: 45px;
+    }
+    &-actions {
+      &__item {
+        flex-direction: row;
+
+        &-img {
+          margin-top: 40px;
+        }
+        &-content {
+          margin-top: 40px;
+          margin-left: 30px;
+        }
+        &-header {
+          font-size: 20px;
+          text-align: left;
+        }
+        &-text {
+          font-size: 18px;
+          line-height: 25px;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .features {
+    max-width: 1200px;
+    margin: 0 auto;
+    &-header {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      width: 50%;
+      box-sizing: border-box;
+      padding-left: 25px;
+      text-align: left;
+    }
+    &-actions {
+      width: 50%;
+    }
+    &-code {
+      position: absolute;
+      top: 100px;
+      left: 50%;
+      width: calc(50vw - 10px);
+      & img{
+        min-height: 450px;
+      }
+    }
+  }
+}

@@ -1,0 +1,74 @@
+.present {
+  &_bg{
+    margin: 0 auto;
+  }
+  &-header {
+    margin-top: 64px;
+    line-height: 35px;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $darkViolette;
+  }
+  &-text {
+    margin-top: 15px;
+    line-height: 20px;
+    font-size: 15px;
+  }
+  &-actions {
+    margin-top: 10px;
+    margin-bottom: 90px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__watch {
+      @include present-actions;
+    }
+    &__star {
+      @include present-actions;
+    }
+    &__fork {
+      @include present-actions;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .present {
+    &_bg{
+      margin: 0 auto;
+    }
+    &-header {
+      margin-top: 80px;
+      font-size: 40px;
+    }
+    &-text {
+      margin-top: 30px;
+      line-height: 30px;
+      font-size: 20px;
+    }
+    &-actions {
+      margin-top: 15px;
+      margin-bottom: 100px;
+    }
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .present {
+    &_bg{
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    &-header {
+      margin-top: 100px;
+      font-size: 50px;
+    }
+    &-text {
+      margin-top: 40px;
+      line-height: 35px;
+      font-size: 22px;
+    }
+  }
+}

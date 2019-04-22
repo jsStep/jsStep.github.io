@@ -1,0 +1,125 @@
+.price {
+  color: $white;
+
+  &-bg {
+    background-color: $darkViolette;
+  }
+
+  &-header {
+    padding-top: 50px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  &-actions {
+    @include flex-column;
+    margin-top: 50px;
+
+    &__part {
+      @include flex-column;
+      align-items: center;
+    }
+
+    &__item {
+      width: 220px;
+      height: 440px;
+      margin: 6px 0;
+      background-color: rgba(255, 255, 255, 0.2);
+
+      &-header {
+        @include flex-center;
+        height: 80px;
+        font-size: 25px;
+        text-transform: uppercase;
+        background-color: rgba(255, 255, 255, 0.3);
+
+        &_selected {
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+      }
+      &-price {
+        margin-top: 30px;
+        font-size: 60px;
+
+        &_bold {
+          font-weight: bold;
+        }
+      }
+      &-period {
+        margin-top: 20px;
+        font-size: 16px;
+        text-transform: uppercase;
+        color: $lightViolette;
+      }
+      &-hr {
+        display: inline-block;
+        margin-top: 36px;
+        margin-bottom: 25px;
+        width: 60px;
+        height: 5px;
+        background-color: $violette;
+      }
+      &-content {
+        font-size: 18px;
+        line-height: 25px;
+      }
+      &-button {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 35px;
+        width: 160px;
+        height: 40px;
+        border-radius: 20px;
+        font-size: 16px;
+        text-transform: uppercase;
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0.3);
+        color: $white;
+
+        &:hover {
+          font-weight: bold;
+          background-color: rgba(255, 255, 255, 0.7);
+          color: $lightViolette;
+        }
+      }
+
+      &_selected {
+        transform: scale(1.2, 1.2);
+        margin: 50px 0;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .price {
+    &-header {
+      font-size: 45px;
+    }
+    &-actions {
+      &__part {
+        flex-direction: row;
+      }
+      &__item {
+        margin: 50px 20px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .price {
+    &-actions {
+      flex-direction: row;
+
+      &__item {
+        margin: 50px 6px;
+
+        &_selected {
+          margin: 50px 30px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,152 @@
+.header{
+  background-image: url("../img/block1_noutbook_768.png");
+  background-position: center;
+  background-size: cover;
+  height: 617px;
+  display: flex;
+  flex-direction: column;
+  align-content:space-between;
+  align-items: center;
+  position: relative;
+  &__block-text{
+    width: 320px;
+    height: 550px;
+    padding-top: 10px;
+  }
+  &__main-text{
+    color: #ffffff;
+    font-size: 48px;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 5px;
+    padding-top: 26px;
+  }
+  &__second-text{
+    display: block;
+    color: $violette;
+    font-size: 18px;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    padding-top: 19px;
+    width: 95%;
+  }
+  &__last-text{
+    color: #848e97;
+    font-size: 14px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding-top: 20px;
+  }
+  &__link{
+    margin-top: 32px;
+    text-decoration: none;
+    //font-family: Lato;
+    font-size: 20px;
+    color: $white;
+    padding: 15px 40px;
+    background-color: $violette;
+    border-radius: 25px;
+  }
+  &__link:hover{
+    color: $violette;
+    background-color: $white;
+    border: 1px solid $violette;
+  }
+  &__text{
+    color: #848e97;
+    margin-bottom: -39px;
+    font-size: 15px;
+    //font-family: Lato;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header{
+    height: 681px;
+    &__block-text{
+      width: 100%;
+      padding-top: 10px;
+    }
+    &__main-text{
+      font-size: 70px;
+      letter-spacing: 8px;
+      padding-top: 31px;
+    }
+    &__second-text{
+      font-size: 22px;
+      letter-spacing: 0.3px;
+      padding-top: 30px;
+      padding-left: 20px;
+    }
+    &__last-text{
+      color: #848e97;
+      font-size: 14px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: 1px;
+      padding-top: 20px;
+    }
+    &__link{
+      position: absolute;
+      bottom: -30px;
+      font-size: 25px;
+      padding: 20px 60px;
+    }
+    &__link:hover{
+      color: $violette;
+      background-color: $white;
+      border: 1px solid $violette;
+    }
+    &__text{
+      position: absolute;
+      bottom: -20px;
+      letter-spacing: 0.4px;
+    }
+  }
+}
+
+@media screen and (min-width: 993px) {
+  .header{
+    height: 700px;
+    &__block-text{
+      width: 100%;
+      padding-top: 10px;
+    }
+    &__main-text{
+      font-size: 82px;
+      letter-spacing: 9px;
+      padding-top: 38px;
+    }
+    &__second-text{
+      font-size: 27px;
+      letter-spacing: 0.5px;
+      padding-top: 24px;
+      padding-left: 30px;
+    }
+    &__last-text{
+      color: #848e97;
+      font-size: 16px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: 900;
+      letter-spacing: 1px;
+      padding-top: 18px;
+    }
+    &__link:hover{
+      color: $violette;
+      background-color: $white;
+      border: 1px solid $violette;
+    }
+    &__text{
+      position: absolute;
+      bottom: -10px;
+      margin-bottom: -55px;
+      //font-family: Lato;
+      letter-spacing: 0.4px;
+    }
+  }
+}
